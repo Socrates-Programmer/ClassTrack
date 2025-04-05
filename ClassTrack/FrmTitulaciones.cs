@@ -16,5 +16,20 @@ namespace ClassTrack
         {
             InitializeComponent();
         }
+
+        private void FrmTitulaciones_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            // Ocultar el formulario actual
+            this.Hide();
+
+            // Mostrar el formulario de menú
+            menu menuForm = new menu();
+            menuForm.Show();
+        }
     }
 }

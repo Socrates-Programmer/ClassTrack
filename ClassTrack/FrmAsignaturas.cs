@@ -31,7 +31,12 @@ namespace ClassTrack
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            // Limpiar selección y campos
+            // Ocultar el formulario actual
+            this.Hide();
+
+            // Mostrar el formulario de menú
+            menu menuForm = new menu();
+            menuForm.Show();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

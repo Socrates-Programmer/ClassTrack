@@ -28,12 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FrmInformes";
+            btnCancelar = new Button();
+            SuspendLayout();
+            // 
+            // btnCancelar
+            // 
+            btnCancelar.Location = new Point(650, 373);
+            btnCancelar.Margin = new Padding(2);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(103, 20);
+            btnCancelar.TabIndex = 10;
+            btnCancelar.Text = "Volver al menu";
+            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
+            // 
+            // FrmInformes
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(btnCancelar);
+            Name = "FrmInformes";
+            Text = "FrmInformes";
+            Load += FrmInformes_Load;
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Button btnCancelar;
     }
 }

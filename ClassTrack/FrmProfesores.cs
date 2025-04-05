@@ -48,5 +48,20 @@ namespace ClassTrack
         {
 
         }
+
+        private void FrmProfesores_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancelar_Click_1(object sender, EventArgs e)
+        {
+            // Ocultar el formulario actual
+            this.Hide();
+
+            // Mostrar el formulario de menú
+            menu menuForm = new menu();
+            menuForm.Show();
+        }
     }
 }
