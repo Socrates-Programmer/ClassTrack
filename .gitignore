@@ -1,0 +1,19 @@
+﻿################################################################################
+# Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/ClassTrack/FileContentIndex
+/.vs/ClassTrack/v17/.suo
+/ClassTrack/obj/Debug/net8.0-windows/ClassTrack.AssemblyInfo.cs
+/ClassTrack/obj/Debug/net8.0-windows/ClassTrack.AssemblyInfoInputs.cache
+/ClassTrack/obj/Debug/net8.0-windows/ClassTrack.assets.cache
+/ClassTrack/obj/ClassTrack.csproj.nuget.dgspec.json
+/ClassTrack/obj/Debug/net8.0-windows/ClassTrack.GeneratedMSBuildEditorConfig.editorconfig
+/ClassTrack/obj/ClassTrack.csproj.nuget.g.props
+/ClassTrack/obj/project.assets.json
+/ClassTrack/obj/project.nuget.cache
+*.dll
+/ClassTrack.Domain/obj/Debug/net8.0
+/ClassTrack.Domain/obj
+/ClassTrack.Persistence/obj/Debug/net8.0
+/ClassTrack.Persistence/obj
