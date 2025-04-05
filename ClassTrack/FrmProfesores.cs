@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ClassTrack.Domain.Entities;
+using ClassTrack.Persistence.Repositories;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,18 +14,48 @@ namespace ClassTrack
 {
     public partial class FrmProfesores : Form
     {
+        private readonly AreaConocimientoRepository _areaConocimientoRepository;
+        private readonly ProfesoresRepository _profesoresRepository;
+
         public FrmProfesores()
         {
             InitializeComponent();
+            _areaConocimientoRepository = new AreaConocimientoRepository();
+            _profesoresRepository = new ProfesoresRepository();
+
             // TODO: Llenar dgvProfesores con datos desde la base de datos
             // TODO: Llenar cbArea con las áreas disponibles
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
+        private async void btnAgregar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtNombre.Text))
+            {
+                MessageBox.Show("Campo nombre vacio");
+                return;
+            }
+
+            var entidad = new Profesor()
+            {
+                Nombre = txtNombre.Text,
+                AreaConocimientoId = (int)cbArea.SelectedValue,
+                Despacho = txtDespacho.Text,
+            };
+
+            if (await _profesoresRepository.InsertAsync(entidad))
+            {
+                MessageBox.Show("Profesor creado");
+            }
+            else
+            {
+                MessageBox.Show("Profesor no se puedo crear");
+                return;
+            }
+
             txtNombre.Text = "";
-            txtCedula.Text = "";
-            cbArea.SelectedIndex = -1;
+            txtDespacho.Text = "";
+            txtNombre.Focus();
+            await CargarDatos();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -45,6 +77,27 @@ namespace ClassTrack
         private void btnGuardar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private async void FrmProfesores_Load(object sender, EventArgs e)
+        {
+            await CargarDatos();
+        }
+
+
+        private async Task CargarDatos()
+        {
+            dgvProfesores.DataBindings.Clear();
+            //cbDepartamento.Items.Clear();
+            var data = await _profesoresRepository.GetAllAsync();
+            var listArea = await _areaConocimientoRepository.GetAllAsync();
+
+
+            cbArea.DataSource = listArea;
+            cbArea.DisplayMember = "Nombre";   // Lo que se muestra
+            cbArea.ValueMember = "Id";         // Valor asociado
+
+            dgvProfesores.DataSource = data;
         }
     }
 }
