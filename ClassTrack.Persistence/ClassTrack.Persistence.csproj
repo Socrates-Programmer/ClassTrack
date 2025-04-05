@@ -10,7 +10,6 @@
     <Folder Include="Configurations\" />
     <Folder Include="Interceptors\" />
     <Folder Include="Migrations\" />
-    <Folder Include="Repositories\" />
   </ItemGroup>
 
   <ItemGroup>
