@@ -15,6 +15,31 @@ namespace ClassTrack
         public FrmProfesores()
         {
             InitializeComponent();
+            // TODO: Llenar dgvProfesores con datos desde la base de datos
+            // TODO: Llenar cbArea con las áreas disponibles
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            txtNombre.Text = "";
+            txtCedula.Text = "";
+            cbArea.SelectedIndex = -1;
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            // TODO: Obtener profesor seleccionado del DataGridView
+            // y cargar datos en los campos para editar
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            // TODO: Confirmar y eliminar profesor seleccionado
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            // Limpiar campos y selección del DataGridView
         }
     }
 }

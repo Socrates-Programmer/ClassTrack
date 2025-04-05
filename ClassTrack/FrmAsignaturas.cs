@@ -33,6 +33,11 @@ namespace ClassTrack
         {
             // Limpiar selección y campos
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //Mostrar asignaturas.
+        }
     }
 }
 
