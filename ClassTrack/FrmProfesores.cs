@@ -24,6 +24,8 @@ namespace ClassTrack
             txtNombre.Text = "";
             txtCedula.Text = "";
             cbArea.SelectedIndex = -1;
+
+
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
