@@ -2,6 +2,7 @@
 # Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
 ################################################################################
 
+.vs/
 /.vs/ClassTrack/FileContentIndex
 /.vs/ClassTrack/v17/.suo
 /.vs/ClassTrack/v17/DocumentLayout.json
@@ -20,3 +21,13 @@
 /ClassTrack.Domain/obj
 /ClassTrack.Persistence/obj
 /.vs/ClassTrack/v17/DocumentLayout.backup.json
+/.vs/ClassTrack/DesignTimeBuild/.dtbcache.v2
+/.vs/ClassTrack/FileContentIndex/60858d5c-ec03-4322-8f42-ae6479bab832.vsidx
+/.vs/ClassTrack/FileContentIndex/c93c4baa-2e0e-420a-8307-1d364add90ef.vsidx
+/.vs/ClassTrack/FileContentIndex/d7473d45-dc1c-4367-b0cd-0c4f106dda54.vsidx
+/.vs/ClassTrack/v17/.futdcache.v2
+/ClassTrack/obj/Debug/net8.0-windows
+/ClassTrack/obj/ClassTrack.csproj.nuget.g.targets
+/ClassTrack/bin/Debug/net8.0-windows
+/ClassTrack.Domain/bin/Debug/net8.0
+/ClassTrack.Persistence/bin/Debug/net8.0
