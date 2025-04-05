@@ -40,6 +40,7 @@
             txtNombre = new TextBox();
             dgvProfesores = new DataGridView();
             lblTitulo = new Label();
+            btnGuardar = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvProfesores).BeginInit();
             SuspendLayout();
             // 
@@ -82,7 +83,7 @@
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(431, 378);
+            btnEliminar.Location = new Point(470, 378);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(112, 34);
             btnEliminar.TabIndex = 22;
@@ -92,7 +93,7 @@
             // 
             // btnEditar
             // 
-            btnEditar.Location = new Point(262, 378);
+            btnEditar.Location = new Point(339, 378);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(112, 34);
             btnEditar.TabIndex = 21;
@@ -151,11 +152,22 @@
             lblTitulo.TabIndex = 14;
             lblTitulo.Text = "Profesores";
             // 
+            // btnGuardar
+            // 
+            btnGuardar.Location = new Point(212, 378);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(112, 34);
+            btnGuardar.TabIndex = 27;
+            btnGuardar.Text = "Guardar";
+            btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
+            // 
             // FrmProfesores
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnGuardar);
             Controls.Add(lblArea);
             Controls.Add(lblCedula);
             Controls.Add(lblNombre);
@@ -188,5 +200,6 @@
         private TextBox txtNombre;
         private DataGridView dgvProfesores;
         private Label lblTitulo;
+        private Button btnGuardar;
     }
 }

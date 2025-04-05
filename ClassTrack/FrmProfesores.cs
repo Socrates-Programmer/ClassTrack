@@ -41,5 +41,10 @@ namespace ClassTrack
         {
             // Limpiar campos y selección del DataGridView
         }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
