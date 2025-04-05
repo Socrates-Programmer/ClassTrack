@@ -10,6 +10,9 @@
     <Compile Update="FrmDepartamentos.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmGrupos.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmHorarioConsulta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -22,5 +25,10 @@
     <Compile Update="FrmTitulaciones.cs">
       <SubType>Form</SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="FrmHorarioConsulta.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
