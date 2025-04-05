@@ -41,6 +41,10 @@ namespace ClassTrack.Persistence.Contexts
                 .HasForeignKey(d => d.AsignaturaID)
                 .OnDelete(DeleteBehavior.Restrict); // evita la cascada también
 
+
+
+
+
         }
     }
 }

@@ -8,6 +8,6 @@ namespace ClassTrack.Domain.Entities
 
         //Propiedad de navegacion
 
-        public AreaConocimiento AreaConocimientos { get; set; }
+        public ICollection<AreaConocimiento> AreaConocimientos { get; set; }
     }
 }

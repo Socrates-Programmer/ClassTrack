@@ -9,7 +9,7 @@ namespace ClassTrack.Domain.Entities
 
         //Propiedad de navegacion
 
-        public ICollection<Departamento> Departamentos { get; set; }
+        public Departamento Departamento { get; set; }
         public ICollection<Asignatura> Asignaturas { get; set; }
         public ICollection<Profesor> Profesores { get; set; }
     }

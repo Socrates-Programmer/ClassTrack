@@ -39,6 +39,8 @@ namespace ClassTrack.Persistence.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("DepartamentoID");
+
                     b.ToTable("AreaConocimientos");
                 });
 
@@ -101,16 +103,11 @@ namespace ClassTrack.Persistence.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("AreaConocimientosId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Nombre")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("AreaConocimientosId");
 
                     b.ToTable("Departamentos");
                 });
@@ -283,6 +280,17 @@ namespace ClassTrack.Persistence.Migrations
                     b.ToTable("Titulaciones");
                 });
 
+            modelBuilder.Entity("ClassTrack.Domain.Entities.AreaConocimiento", b =>
+                {
+                    b.HasOne("ClassTrack.Domain.Entities.Departamento", "Departamento")
+                        .WithMany("AreaConocimientos")
+                        .HasForeignKey("DepartamentoID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Departamento");
+                });
+
             modelBuilder.Entity("ClassTrack.Domain.Entities.Asignatura", b =>
                 {
                     b.HasOne("ClassTrack.Domain.Entities.AreaConocimiento", "AreaConocimiento")
@@ -292,17 +300,6 @@ namespace ClassTrack.Persistence.Migrations
                         .IsRequired();
 
                     b.Navigation("AreaConocimiento");
-                });
-
-            modelBuilder.Entity("ClassTrack.Domain.Entities.Departamento", b =>
-                {
-                    b.HasOne("ClassTrack.Domain.Entities.AreaConocimiento", "AreaConocimientos")
-                        .WithMany("Departamentos")
-                        .HasForeignKey("AreaConocimientosId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("AreaConocimientos");
                 });
 
             modelBuilder.Entity("ClassTrack.Domain.Entities.Docencia", b =>
@@ -383,8 +380,6 @@ namespace ClassTrack.Persistence.Migrations
                 {
                     b.Navigation("Asignaturas");
 
-                    b.Navigation("Departamentos");
-
                     b.Navigation("Profesores");
                 });
 
@@ -393,6 +388,11 @@ namespace ClassTrack.Persistence.Migrations
                     b.Navigation("Docencias");
 
                     b.Navigation("Grupos");
+                });
+
+            modelBuilder.Entity("ClassTrack.Domain.Entities.Departamento", b =>
+                {
+                    b.Navigation("AreaConocimientos");
                 });
 
             modelBuilder.Entity("ClassTrack.Domain.Entities.Profesor", b =>

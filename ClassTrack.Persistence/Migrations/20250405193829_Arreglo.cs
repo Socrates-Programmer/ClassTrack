@@ -6,23 +6,22 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace ClassTrack.Persistence.Migrations
 {
     /// <inheritdoc />
-    public partial class CambioRelacion2 : Migration
+    public partial class Arreglo : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "AreaConocimientos",
+                name: "Departamentos",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Nombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DepartamentoID = table.Column<int>(type: "int", nullable: false)
+                    Nombre = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_AreaConocimientos", x => x.Id);
+                    table.PrimaryKey("PK_Departamentos", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -36,6 +35,26 @@ namespace ClassTrack.Persistence.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Titulaciones", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "AreaConocimientos",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Nombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    DepartamentoID = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AreaConocimientos", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_AreaConocimientos_Departamentos_DepartamentoID",
+                        column: x => x.DepartamentoID,
+                        principalTable: "Departamentos",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -62,26 +81,6 @@ namespace ClassTrack.Persistence.Migrations
                     table.ForeignKey(
                         name: "FK_Asignaturas_AreaConocimientos_AreaConocimientoId",
                         column: x => x.AreaConocimientoId,
-                        principalTable: "AreaConocimientos",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Departamentos",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Nombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    AreaConocimientosId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Departamentos", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Departamentos_AreaConocimientos_AreaConocimientosId",
-                        column: x => x.AreaConocimientosId,
                         principalTable: "AreaConocimientos",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -221,14 +220,14 @@ namespace ClassTrack.Persistence.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_AreaConocimientos_DepartamentoID",
+                table: "AreaConocimientos",
+                column: "DepartamentoID");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Asignaturas_AreaConocimientoId",
                 table: "Asignaturas",
                 column: "AreaConocimientoId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Departamentos_AreaConocimientosId",
-                table: "Departamentos",
-                column: "AreaConocimientosId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Docencias_AsignaturaID",
@@ -270,9 +269,6 @@ namespace ClassTrack.Persistence.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Departamentos");
-
-            migrationBuilder.DropTable(
                 name: "Docencias");
 
             migrationBuilder.DropTable(
@@ -298,6 +294,9 @@ namespace ClassTrack.Persistence.Migrations
 
             migrationBuilder.DropTable(
                 name: "AreaConocimientos");
+
+            migrationBuilder.DropTable(
+                name: "Departamentos");
         }
     }
 }
