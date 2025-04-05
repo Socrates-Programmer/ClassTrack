@@ -16,5 +16,20 @@ namespace ClassTrack
         {
             InitializeComponent();
         }
+
+        private void dgvProfesores_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnGenerarInforme_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExportarPDF_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
