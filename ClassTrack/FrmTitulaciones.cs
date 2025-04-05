@@ -43,7 +43,7 @@ namespace ClassTrack
                 Nombre = txtNombre.Text
             };
 
-            TitulacionRepository.InsertAsync(entidad);
+            await TitulacionRepository.InsertAsync(entidad);
             LoadTitulaciones();  // Actualizar el DataGridView
         }
 
