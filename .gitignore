@@ -31,3 +31,5 @@
 /ClassTrack/bin/Debug/net8.0-windows
 /ClassTrack.Domain/bin/Debug/net8.0
 /ClassTrack.Persistence/bin/Debug/net8.0
+/ClassTrack/obj/Debug/net8.0-windows/ClassTrack.designer.deps.json
+/ClassTrack/obj/Debug/net8.0-windows/ClassTrack.designer.runtimeconfig.json
