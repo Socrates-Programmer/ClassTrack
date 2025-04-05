@@ -27,3 +27,6 @@
 /.vs/ClassTrack/v17/.futdcache.v2
 /ClassTrack/obj/Debug/net8.0-windows
 /ClassTrack/obj/ClassTrack.csproj.nuget.g.targets
+/ClassTrack/bin/Debug/net8.0-windows
+/ClassTrack.Domain/bin/Debug/net8.0
+/ClassTrack.Persistence/bin/Debug/net8.0
