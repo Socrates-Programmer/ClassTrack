@@ -21,7 +21,7 @@ namespace ClassTrack.Domain.Entities
 
         public int LimiteAdmision { get; set; }
 
-        public int AreaID { get; set; }
+        public int AreaConocimientoId { get; set; }
 
         //Propiedad de navegacion
 

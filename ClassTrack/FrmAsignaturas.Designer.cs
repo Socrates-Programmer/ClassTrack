@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            dataGridView1 = new DataGridView();
+            dgvAsignatura = new DataGridView();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
+            cbTitulacion = new ComboBox();
+            cbArea = new ComboBox();
             btnAgregar = new Button();
             btnEditar = new Button();
             btnEliminar = new Button();
@@ -42,64 +42,71 @@
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvAsignatura).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(72, 36);
+            label1.Location = new Point(50, 22);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(150, 32);
+            label1.Size = new Size(100, 21);
             label1.TabIndex = 0;
             label1.Text = "Asignaturas";
             // 
-            // dataGridView1
+            // dgvAsignatura
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(339, 57);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(364, 276);
-            dataGridView1.TabIndex = 1;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            dgvAsignatura.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvAsignatura.Location = new Point(237, 34);
+            dgvAsignatura.Margin = new Padding(2);
+            dgvAsignatura.Name = "dgvAsignatura";
+            dgvAsignatura.RowHeadersWidth = 62;
+            dgvAsignatura.Size = new Size(255, 166);
+            dgvAsignatura.TabIndex = 1;
+            dgvAsignatura.CellContentClick += dataGridView1_CellContentClick;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(72, 122);
+            textBox1.Location = new Point(50, 73);
+            textBox1.Margin = new Padding(2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(182, 31);
+            textBox1.Size = new Size(129, 23);
             textBox1.TabIndex = 2;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(72, 181);
+            textBox2.Location = new Point(50, 109);
+            textBox2.Margin = new Padding(2);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(182, 31);
+            textBox2.Size = new Size(129, 23);
             textBox2.TabIndex = 3;
             // 
-            // comboBox1
+            // cbTitulacion
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(72, 245);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(182, 33);
-            comboBox1.TabIndex = 4;
+            cbTitulacion.FormattingEnabled = true;
+            cbTitulacion.Location = new Point(50, 147);
+            cbTitulacion.Margin = new Padding(2);
+            cbTitulacion.Name = "cbTitulacion";
+            cbTitulacion.Size = new Size(129, 23);
+            cbTitulacion.TabIndex = 4;
             // 
-            // comboBox2
+            // cbArea
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(72, 306);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(182, 33);
-            comboBox2.TabIndex = 5;
+            cbArea.FormattingEnabled = true;
+            cbArea.Location = new Point(50, 184);
+            cbArea.Margin = new Padding(2);
+            cbArea.Name = "cbArea";
+            cbArea.Size = new Size(129, 23);
+            cbArea.TabIndex = 5;
             // 
             // btnAgregar
             // 
-            btnAgregar.Location = new Point(72, 376);
+            btnAgregar.Location = new Point(50, 226);
+            btnAgregar.Margin = new Padding(2);
             btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(112, 34);
+            btnAgregar.Size = new Size(78, 20);
             btnAgregar.TabIndex = 6;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
@@ -107,9 +114,10 @@
             // 
             // btnEditar
             // 
-            btnEditar.Location = new Point(249, 376);
+            btnEditar.Location = new Point(174, 226);
+            btnEditar.Margin = new Padding(2);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(112, 34);
+            btnEditar.Size = new Size(78, 20);
             btnEditar.TabIndex = 7;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = true;
@@ -117,9 +125,10 @@
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(418, 376);
+            btnEliminar.Location = new Point(293, 226);
+            btnEliminar.Margin = new Padding(2);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(112, 34);
+            btnEliminar.Size = new Size(78, 20);
             btnEliminar.TabIndex = 8;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = true;
@@ -127,9 +136,10 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(591, 376);
+            btnCancelar.Location = new Point(414, 226);
+            btnCancelar.Margin = new Padding(2);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(112, 34);
+            btnCancelar.Size = new Size(78, 20);
             btnCancelar.TabIndex = 9;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
@@ -138,44 +148,48 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(72, 94);
+            label2.Location = new Point(50, 56);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(82, 25);
+            label2.Size = new Size(54, 15);
             label2.TabIndex = 10;
             label2.Text = "Nombre:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(72, 156);
+            label3.Location = new Point(50, 94);
+            label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(75, 25);
+            label3.Size = new Size(49, 15);
             label3.TabIndex = 11;
             label3.Text = "Codigo:";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(72, 217);
+            label4.Location = new Point(50, 130);
+            label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(168, 25);
+            label4.Size = new Size(114, 15);
             label4.TabIndex = 12;
             label4.Text = "Titulación Asociada:";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(72, 281);
+            label5.Location = new Point(50, 169);
+            label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
-            label5.Size = new Size(193, 25);
+            label5.Size = new Size(129, 15);
             label5.TabIndex = 13;
             label5.Text = "Area de Conocimiento:";
             // 
             // FrmAsignaturas
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(560, 270);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -184,15 +198,17 @@
             Controls.Add(btnEliminar);
             Controls.Add(btnEditar);
             Controls.Add(btnAgregar);
-            Controls.Add(comboBox2);
-            Controls.Add(comboBox1);
+            Controls.Add(cbArea);
+            Controls.Add(cbTitulacion);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvAsignatura);
             Controls.Add(label1);
+            Margin = new Padding(2);
             Name = "FrmAsignaturas";
             Text = "FrmAsignaturas";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += FrmAsignaturas_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvAsignatura).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -200,11 +216,11 @@
         #endregion
 
         private Label label1;
-        private DataGridView dataGridView1;
+        private DataGridView dgvAsignatura;
         private TextBox textBox1;
         private TextBox textBox2;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
+        private ComboBox cbTitulacion;
+        private ComboBox cbArea;
         private Button btnAgregar;
         private Button btnEditar;
         private Button btnEliminar;

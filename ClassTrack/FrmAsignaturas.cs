@@ -1,21 +1,61 @@
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
+using ClassTrack.Domain.Entities;
+using ClassTrack.Persistence.Repositories;
 
 namespace ClassTrack
 {
     public partial class FrmAsignaturas : Form
     {
+        private readonly AreaConocimientoRepository _areaConocimientoRepository;
+        private readonly AsignaturasRepository _asignaturasRepository;
+        private readonly TitulacionRepository _titulacionRepository;
+
         public FrmAsignaturas()
         {
             InitializeComponent();
+
+            _areaConocimientoRepository = new AreaConocimientoRepository();
+            _asignaturasRepository = new AsignaturasRepository();
+            _titulacionRepository = new TitulacionRepository();
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
+        private async void btnAgregar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(textBox1.Text))
+            {
+                MessageBox.Show("Campo nombre vacio");
+                return;
+            }
+
+            var entidad = new Asignatura()
+            {
+                Nombre = textBox1.Text,
+                Codigo = textBox2.Text,
+                Tipo = Domain.Enums.TipoAsignatura.Obligatoria,
+                Curso = 3,
+                Duracion = "Primer Semestre",
+                CreditosTeoricos = 2.5M,
+                CreditosPracticos = 2.5M,
+                LibreConfiguracion = true,
+                LimiteAdmision = 0,
+                AreaConocimientoId = (int)cbArea.SelectedValue
+            };
+
+            if (await _asignaturasRepository.InsertAsync(entidad))
+            {
+                MessageBox.Show("Departamento creado");
+            }
+            else
+            {
+                MessageBox.Show("Departamento no se puedo crear");
+                return;
+            }
+
+
+            await CargarDatos();
             // Limpiar campos para nueva asignatura
             textBox1.Text = "";
             textBox2.Text = "";
-            comboBox1.SelectedIndex = -1;
-            comboBox2.SelectedIndex = -1;
+
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -38,7 +78,35 @@ namespace ClassTrack
         {
             //Mostrar asignaturas.
         }
+
+        private async void FrmAsignaturas_Load(object sender, EventArgs e)
+        {
+            await CargarDatos();
+        }
+
+
+        private async Task CargarDatos()
+        {
+            dgvAsignatura.DataBindings.Clear();
+            //cbDepartamento.Items.Clear();
+            var data = await _asignaturasRepository.GetAllAsync();
+            var listArea = await _areaConocimientoRepository.GetAllAsync();
+            var listTitular = await _titulacionRepository.GetAllAsync();
+
+
+            //Titular
+            cbTitulacion.DataSource = listTitular;
+            cbTitulacion.DisplayMember = "Nombre";
+            cbTitulacion.ValueMember = "Id";
+
+            //Area de conocimiento
+            cbArea.DataSource = listArea;
+            cbArea.DisplayMember = "Nombre";
+            cbArea.ValueMember = "Id";
+
+            dgvAsignatura.DataSource = data;
+        }
     }
 }
 
-    
+

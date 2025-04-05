@@ -21,7 +21,7 @@ namespace ClassTrack
             TitulacionRepository = new TitulacionRepository();
         }
 
-        private async void LoadTitulaciones()
+        private  async Task LoadTitulaciones()
         {
             var titulaciones = await TitulacionRepository.GetAllAsync();
             dgvTitulaciones.DataSource = null;
@@ -30,26 +30,31 @@ namespace ClassTrack
 
         private async void btnAgregar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtNombre.Text) || cbNivel.SelectedIndex == -1)
+            if (string.IsNullOrWhiteSpace(txtNombre.Text))
             {
                 MessageBox.Show("Debe completar todos los campos.");
                 return;
             }
 
-            string nivel = cbNivel.SelectedItem.ToString();
+           // string nivel = cbNivel.SelectedItem.ToString();
 
             var entidad = new Titulacion()
             {
                 Nombre = txtNombre.Text
             };
 
-            TitulacionRepository.InsertAsync(entidad);
-            LoadTitulaciones();  // Actualizar el DataGridView
+            await TitulacionRepository.InsertAsync(entidad);
+            await LoadTitulaciones();  // Actualizar el DataGridView
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private async void FrmTitulaciones_Load(object sender, EventArgs e)
+        {
+            await LoadTitulaciones();
         }
     }
 }
