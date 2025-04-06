@@ -44,9 +44,10 @@
             // 
             // btnGuardar
             // 
-            btnGuardar.Location = new Point(212, 378);
+            btnGuardar.Location = new Point(148, 227);
+            btnGuardar.Margin = new Padding(2, 2, 2, 2);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(112, 34);
+            btnGuardar.Size = new Size(78, 20);
             btnGuardar.TabIndex = 40;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = true;
@@ -55,53 +56,59 @@
             // lblNivel
             // 
             lblNivel.AutoSize = true;
-            lblNivel.Location = new Point(85, 186);
+            lblNivel.Location = new Point(60, 112);
+            lblNivel.Margin = new Padding(2, 0, 2, 0);
             lblNivel.Name = "lblNivel";
-            lblNivel.Size = new Size(148, 25);
+            lblNivel.Size = new Size(100, 15);
             lblNivel.TabIndex = 39;
             lblNivel.Text = "Nivel Académico:\n";
             // 
             // lblNombre
             // 
             lblNombre.AutoSize = true;
-            lblNombre.Location = new Point(85, 96);
+            lblNombre.Location = new Point(60, 58);
+            lblNombre.Margin = new Padding(2, 0, 2, 0);
             lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(205, 25);
+            lblNombre.Size = new Size(138, 15);
             lblNombre.TabIndex = 37;
             lblNombre.Text = "Nombre de la Titulación:\n";
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(604, 378);
+            btnCancelar.Location = new Point(423, 227);
+            btnCancelar.Margin = new Padding(2, 2, 2, 2);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(112, 34);
+            btnCancelar.Size = new Size(78, 20);
             btnCancelar.TabIndex = 36;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(470, 378);
+            btnEliminar.Location = new Point(329, 227);
+            btnEliminar.Margin = new Padding(2, 2, 2, 2);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(112, 34);
+            btnEliminar.Size = new Size(78, 20);
             btnEliminar.TabIndex = 35;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = true;
             // 
             // btnEditar
             // 
-            btnEditar.Location = new Point(339, 378);
+            btnEditar.Location = new Point(237, 227);
+            btnEditar.Margin = new Padding(2, 2, 2, 2);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(112, 34);
+            btnEditar.Size = new Size(78, 20);
             btnEditar.TabIndex = 34;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = true;
             // 
             // btnAgregar
             // 
-            btnAgregar.Location = new Point(85, 378);
+            btnAgregar.Location = new Point(60, 227);
+            btnAgregar.Margin = new Padding(2, 2, 2, 2);
             btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(112, 34);
+            btnAgregar.Size = new Size(78, 20);
             btnAgregar.TabIndex = 33;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
@@ -110,42 +117,46 @@
             // cbNivel
             // 
             cbNivel.FormattingEnabled = true;
-            cbNivel.Location = new Point(85, 214);
+            cbNivel.Location = new Point(60, 128);
+            cbNivel.Margin = new Padding(2, 2, 2, 2);
             cbNivel.Name = "cbNivel";
-            cbNivel.Size = new Size(182, 33);
+            cbNivel.Size = new Size(129, 23);
             cbNivel.TabIndex = 32;
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(85, 124);
+            txtNombre.Location = new Point(60, 74);
+            txtNombre.Margin = new Padding(2, 2, 2, 2);
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(182, 31);
+            txtNombre.Size = new Size(129, 23);
             txtNombre.TabIndex = 30;
             // 
             // dgvTitulaciones
             // 
             dgvTitulaciones.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvTitulaciones.Location = new Point(352, 59);
+            dgvTitulaciones.Location = new Point(246, 35);
+            dgvTitulaciones.Margin = new Padding(2, 2, 2, 2);
             dgvTitulaciones.Name = "dgvTitulaciones";
             dgvTitulaciones.RowHeadersWidth = 62;
-            dgvTitulaciones.Size = new Size(364, 276);
+            dgvTitulaciones.Size = new Size(255, 166);
             dgvTitulaciones.TabIndex = 29;
             // 
             // lblTitulo
             // 
             lblTitulo.AutoSize = true;
             lblTitulo.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitulo.Location = new Point(85, 38);
+            lblTitulo.Location = new Point(60, 23);
+            lblTitulo.Margin = new Padding(2, 0, 2, 0);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(152, 32);
+            lblTitulo.Size = new Size(103, 21);
             lblTitulo.TabIndex = 28;
             lblTitulo.Text = "Titulaciones";
             // 
             // FrmTitulaciones
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(560, 270);
             Controls.Add(btnGuardar);
             Controls.Add(lblNivel);
             Controls.Add(lblNombre);
@@ -157,8 +168,10 @@
             Controls.Add(txtNombre);
             Controls.Add(dgvTitulaciones);
             Controls.Add(lblTitulo);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "FrmTitulaciones";
             Text = "FrmTitulaciones";
+            Load += FrmTitulaciones_Load;
             ((System.ComponentModel.ISupportInitialize)dgvTitulaciones).EndInit();
             ResumeLayout(false);
             PerformLayout();

@@ -10,7 +10,14 @@
     <Compile Update="FrmDepartamentos.cs">
       <SubType>Form</SubType>
     </Compile>
+<<<<<<< HEAD
     <Compile Update="FrmDocencia.cs">
+=======
+    <Compile Update="FrmGrupos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmHorarioConsulta.cs">
+>>>>>>> 08031860b334ab19c6906e5d19ffcb76c88ab093
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FrmInformes.cs">
@@ -22,5 +29,10 @@
     <Compile Update="FrmTitulaciones.cs">
       <SubType>Form</SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="FrmHorarioConsulta.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
