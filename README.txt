@@ -24,6 +24,6 @@ Permite consultar las asignaturas de cada titulación, acceder a información de
  ┣ 📜 README.md         # Documentación del proyecto
 
 📌 Instalación y ejecución
-1️⃣ Clona este repositorio: git clone https://github.com/tuusuario/ClassTrack.git
+1️⃣ Clona este repositorio: git clone https://github.com/Socrates-Programmer/ClassTrack.git
 2️⃣ Abre la solución en Visual Studio
 3️⃣ Compila y ejecuta la aplicación
