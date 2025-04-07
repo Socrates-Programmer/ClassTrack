@@ -31,18 +31,16 @@
             btnExportarPDF = new Button();
             lblArea = new Label();
             btnGenerarInforme = new Button();
-            cbFiltroTitulacion = new ComboBox();
+            cbProfesores = new ComboBox();
             lblTitulo = new Label();
-            dgvInforme = new DataGridView();
-            lblMensaje = new Label();
-            ((System.ComponentModel.ISupportInitialize)dgvInforme).BeginInit();
             SuspendLayout();
             // 
             // btnExportarPDF
             // 
-            btnExportarPDF.Location = new Point(183, 195);
+            btnExportarPDF.Location = new Point(306, 191);
+            btnExportarPDF.Margin = new Padding(2, 2, 2, 2);
             btnExportarPDF.Name = "btnExportarPDF";
-            btnExportarPDF.Size = new Size(112, 34);
+            btnExportarPDF.Size = new Size(180, 32);
             btnExportarPDF.TabIndex = 40;
             btnExportarPDF.Text = "Exportar";
             btnExportarPDF.UseVisualStyleBackColor = true;
@@ -51,74 +49,58 @@
             // lblArea
             // 
             lblArea.AutoSize = true;
-            lblArea.Location = new Point(85, 90);
+            lblArea.Location = new Point(60, 54);
+            lblArea.Margin = new Padding(2, 0, 2, 0);
             lblArea.Name = "lblArea";
-            lblArea.Size = new Size(193, 25);
+            lblArea.Size = new Size(65, 15);
             lblArea.TabIndex = 39;
-            lblArea.Text = "Área de Conocimiento:\n";
+            lblArea.Text = "Profesores:";
             // 
             // btnGenerarInforme
             // 
-            btnGenerarInforme.Location = new Point(56, 195);
+            btnGenerarInforme.Location = new Point(60, 191);
+            btnGenerarInforme.Margin = new Padding(2, 2, 2, 2);
             btnGenerarInforme.Name = "btnGenerarInforme";
-            btnGenerarInforme.Size = new Size(112, 34);
+            btnGenerarInforme.Size = new Size(180, 32);
             btnGenerarInforme.TabIndex = 33;
             btnGenerarInforme.Text = "Generar";
             btnGenerarInforme.UseVisualStyleBackColor = true;
             btnGenerarInforme.Click += btnGenerarInforme_Click;
             // 
-            // cbFiltroTitulacion
+            // cbProfesores
             // 
-            cbFiltroTitulacion.FormattingEnabled = true;
-            cbFiltroTitulacion.Location = new Point(85, 118);
-            cbFiltroTitulacion.Name = "cbFiltroTitulacion";
-            cbFiltroTitulacion.Size = new Size(182, 33);
-            cbFiltroTitulacion.TabIndex = 32;
+            cbProfesores.FormattingEnabled = true;
+            cbProfesores.Location = new Point(60, 71);
+            cbProfesores.Margin = new Padding(2, 2, 2, 2);
+            cbProfesores.Name = "cbProfesores";
+            cbProfesores.Size = new Size(426, 23);
+            cbProfesores.TabIndex = 32;
             // 
             // lblTitulo
             // 
             lblTitulo.AutoSize = true;
             lblTitulo.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitulo.Location = new Point(85, 38);
+            lblTitulo.Location = new Point(192, 21);
+            lblTitulo.Margin = new Padding(2, 0, 2, 0);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(117, 32);
+            lblTitulo.Size = new Size(185, 21);
             lblTitulo.TabIndex = 28;
-            lblTitulo.Text = "Informes";
-            // 
-            // dgvInforme
-            // 
-            dgvInforme.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvInforme.Location = new Point(322, 54);
-            dgvInforme.Name = "dgvInforme";
-            dgvInforme.RowHeadersWidth = 62;
-            dgvInforme.Size = new Size(426, 341);
-            dgvInforme.TabIndex = 29;
-            dgvInforme.CellContentClick += dgvProfesores_CellContentClick;
-            // 
-            // lblMensaje
-            // 
-            lblMensaje.AutoSize = true;
-            lblMensaje.Location = new Point(152, 298);
-            lblMensaje.Name = "lblMensaje";
-            lblMensaje.Size = new Size(77, 25);
-            lblMensaje.TabIndex = 41;
-            lblMensaje.Text = "Mensaje";
+            lblTitulo.Text = "Informes de Profesores";
             // 
             // FrmInformes
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(lblMensaje);
+            ClientSize = new Size(560, 270);
             Controls.Add(btnExportarPDF);
             Controls.Add(lblArea);
             Controls.Add(btnGenerarInforme);
-            Controls.Add(cbFiltroTitulacion);
-            Controls.Add(dgvInforme);
+            Controls.Add(cbProfesores);
             Controls.Add(lblTitulo);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "FrmInformes";
             Text = "FrmInformes";
-            ((System.ComponentModel.ISupportInitialize)dgvInforme).EndInit();
+            Load += FrmInformes_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -128,9 +110,7 @@
         private Button btnExportarPDF;
         private Label lblArea;
         private Button btnGenerarInforme;
-        private ComboBox cbFiltroTitulacion;
+        private ComboBox cbProfesores;
         private Label lblTitulo;
-        private DataGridView dgvInforme;
-        private Label lblMensaje;
     }
 }
