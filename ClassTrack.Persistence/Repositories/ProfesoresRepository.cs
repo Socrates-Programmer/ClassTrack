@@ -27,7 +27,13 @@ namespace ClassTrack.Persistence.Repositories
 
         public async Task<Profesor?> GetAsync(int id)
         {
-            return await _universidadContext.Profesores.SingleOrDefaultAsync(p => p.Id == id);
+            return await _universidadContext.Profesores
+                .Include(x => x.AreaConocimiento)
+                .ThenInclude(x => x.Departamento)
+                .Include(x => x.HorarioConsultas)
+                .Include(x => x.Docencias)
+                .ThenInclude(x => x.Asignatura)
+                .SingleOrDefaultAsync(p => p.Id == id);
         }
 
         public async Task<bool> InsertAsync(Profesor entity)

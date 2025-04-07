@@ -12,7 +12,7 @@ namespace ClassTrack
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             //Application.Run(new FrmAsignaturas());
-            Application.Run(new FrmDepartamentos());
+            Application.Run(new FrmInformeAsignatura());
         }
     }
 }

@@ -44,7 +44,8 @@ namespace ClassTrack
             };
 
             await TitulacionRepository.InsertAsync(entidad);
-            await LoadTitulaciones();  // Actualizar el DataGridView
+
+            await LoadTitulaciones();  
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)

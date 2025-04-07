@@ -9,6 +9,6 @@ namespace ClassTrack.Domain.Entities
 
 
         //Propiedad de navegacion
-        public Asignatura Asignatura { get; set; }
+        public ICollection<Asignatura> Asignatura { get; set; }
     }
 }

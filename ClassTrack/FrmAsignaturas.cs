@@ -42,11 +42,11 @@ namespace ClassTrack
 
             if (await _asignaturasRepository.InsertAsync(entidad))
             {
-                MessageBox.Show("Departamento creado");
+                MessageBox.Show("Asignatura creado");
             }
             else
             {
-                MessageBox.Show("Departamento no se puedo crear");
+                MessageBox.Show("Asignatura no se puedo crear");
                 return;
             }
 

@@ -1,6 +1,6 @@
 ﻿namespace ClassTrack
 {
-    partial class FrmInformes
+    partial class FrmInformeAsignatura
     {
         /// <summary>
         /// Required designer variable.
@@ -31,76 +31,74 @@
             btnExportarPDF = new Button();
             lblArea = new Label();
             btnGenerarInforme = new Button();
-            cbProfesores = new ComboBox();
+            cbAsignatura = new ComboBox();
             lblTitulo = new Label();
             SuspendLayout();
             // 
             // btnExportarPDF
             // 
-            btnExportarPDF.Location = new Point(306, 191);
-            btnExportarPDF.Margin = new Padding(2, 2, 2, 2);
+            btnExportarPDF.Location = new Point(285, 204);
+            btnExportarPDF.Margin = new Padding(2);
             btnExportarPDF.Name = "btnExportarPDF";
             btnExportarPDF.Size = new Size(180, 32);
-            btnExportarPDF.TabIndex = 40;
+            btnExportarPDF.TabIndex = 45;
             btnExportarPDF.Text = "Exportar";
             btnExportarPDF.UseVisualStyleBackColor = true;
-            btnExportarPDF.Click += btnExportarPDF_Click;
             // 
             // lblArea
             // 
             lblArea.AutoSize = true;
-            lblArea.Location = new Point(60, 54);
+            lblArea.Location = new Point(39, 67);
             lblArea.Margin = new Padding(2, 0, 2, 0);
             lblArea.Name = "lblArea";
-            lblArea.Size = new Size(65, 15);
-            lblArea.TabIndex = 39;
-            lblArea.Text = "Profesores:";
+            lblArea.Size = new Size(67, 15);
+            lblArea.TabIndex = 44;
+            lblArea.Text = "Asignatura:";
             // 
             // btnGenerarInforme
             // 
-            btnGenerarInforme.Location = new Point(60, 191);
-            btnGenerarInforme.Margin = new Padding(2, 2, 2, 2);
+            btnGenerarInforme.Location = new Point(39, 204);
+            btnGenerarInforme.Margin = new Padding(2);
             btnGenerarInforme.Name = "btnGenerarInforme";
             btnGenerarInforme.Size = new Size(180, 32);
-            btnGenerarInforme.TabIndex = 33;
+            btnGenerarInforme.TabIndex = 43;
             btnGenerarInforme.Text = "Generar";
             btnGenerarInforme.UseVisualStyleBackColor = true;
             btnGenerarInforme.Click += btnGenerarInforme_Click;
             // 
-            // cbProfesores
+            // cbAsignatura
             // 
-            cbProfesores.FormattingEnabled = true;
-            cbProfesores.Location = new Point(60, 71);
-            cbProfesores.Margin = new Padding(2, 2, 2, 2);
-            cbProfesores.Name = "cbProfesores";
-            cbProfesores.Size = new Size(426, 23);
-            cbProfesores.TabIndex = 32;
+            cbAsignatura.FormattingEnabled = true;
+            cbAsignatura.Location = new Point(39, 84);
+            cbAsignatura.Margin = new Padding(2);
+            cbAsignatura.Name = "cbAsignatura";
+            cbAsignatura.Size = new Size(426, 23);
+            cbAsignatura.TabIndex = 42;
             // 
             // lblTitulo
             // 
             lblTitulo.AutoSize = true;
             lblTitulo.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitulo.Location = new Point(192, 21);
+            lblTitulo.Location = new Point(171, 34);
             lblTitulo.Margin = new Padding(2, 0, 2, 0);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(185, 21);
-            lblTitulo.TabIndex = 28;
-            lblTitulo.Text = "Informes de Profesores";
+            lblTitulo.Size = new Size(188, 21);
+            lblTitulo.TabIndex = 41;
+            lblTitulo.Text = "Informes de Asignatura";
             // 
-            // FrmInformes
+            // FrmInformeAsignatura
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(560, 270);
+            ClientSize = new Size(514, 277);
             Controls.Add(btnExportarPDF);
             Controls.Add(lblArea);
             Controls.Add(btnGenerarInforme);
-            Controls.Add(cbProfesores);
+            Controls.Add(cbAsignatura);
             Controls.Add(lblTitulo);
-            Margin = new Padding(2, 2, 2, 2);
-            Name = "FrmInformes";
-            Text = "FrmInformes";
-            Load += FrmInformes_Load;
+            Name = "FrmInformeAsignatura";
+            Text = "FrmInformeAsignatura";
+            Load += FrmInformeAsignatura_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -110,7 +108,7 @@
         private Button btnExportarPDF;
         private Label lblArea;
         private Button btnGenerarInforme;
-        private ComboBox cbProfesores;
+        private ComboBox cbAsignatura;
         private Label lblTitulo;
     }
 }
