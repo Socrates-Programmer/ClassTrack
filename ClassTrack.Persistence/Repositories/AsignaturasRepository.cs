@@ -29,6 +29,7 @@ namespace ClassTrack.Persistence.Repositories
         {
             return await _universidadContext.Asignaturas
                 .Include(x => x.Docencias)
+                .ThenInclude(x => x.Profesor)
                 .Include(x => x.AreaConocimiento)
                 .ThenInclude(x => x.Departamento)
                 .Include(x => x.Grupos)

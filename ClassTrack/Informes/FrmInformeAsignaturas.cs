@@ -68,6 +68,15 @@ namespace ClassTrack.Informes
                 var asis = await _asignaturasRepository.GetAsync(equivalente.AsignaturaID2);
                 lblEquivalentes.Items.Add($"{asis.Codigo} - {asis.Nombre}");
             }
+
+
+            //Profesor asignado
+
+            foreach (var docencia in _asignatura.Docencias)
+            {
+                lbProfesores.Items.Add(docencia.Profesor.Nombre);
+            }
+
             //lblGrupoTeoria.Text = _asignatura.Grupos
 
         }
