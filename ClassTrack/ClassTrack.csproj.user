@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
   <ItemGroup>
     <Compile Update="FrmAreasConocimiento.cs">
       <SubType>Form</SubType>
@@ -10,14 +11,16 @@
     <Compile Update="FrmDepartamentos.cs">
       <SubType>Form</SubType>
     </Compile>
-<<<<<<< HEAD
     <Compile Update="FrmDocencia.cs">
-=======
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmEquivalenciaAsignatura.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmGrupos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FrmHorarioConsulta.cs">
->>>>>>> 08031860b334ab19c6906e5d19ffcb76c88ab093
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FrmInformes.cs">
@@ -29,10 +32,5 @@
     <Compile Update="FrmTitulaciones.cs">
       <SubType>Form</SubType>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Update="FrmHorarioConsulta.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
   </ItemGroup>
 </Project>
