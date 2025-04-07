@@ -24,6 +24,15 @@ namespace ClassTrack.Persistence.Repositories
             return await _universidadContext.IncompatibilidadAsignaturas.AsNoTracking().ToListAsync();
         }
 
+        public async Task<IEnumerable<IncompatibilidadAsignatura>> GetAllAsyncByAsignatura(int asignaturaID)
+        {
+            return await _universidadContext.IncompatibilidadAsignaturas
+                .Include(x => x.Asignatura)
+                .AsNoTracking()
+                .Where( x => x.AsignaturaID1.Equals(asignaturaID))
+                .ToListAsync();
+        }
+
         public async Task<IncompatibilidadAsignatura?> GetAsync(int id)
         {
             return await _universidadContext.IncompatibilidadAsignaturas.SingleOrDefaultAsync(p => p.Id == id);

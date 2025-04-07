@@ -26,7 +26,13 @@
     <Compile Update="FrmIncompatibilidadAsignatura.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmInformeAsignatura.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmInformes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Informes\FrmInformeAsignaturas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Informes\FrmInformeProfesor.cs">
