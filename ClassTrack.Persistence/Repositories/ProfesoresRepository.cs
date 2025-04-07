@@ -32,6 +32,7 @@ namespace ClassTrack.Persistence.Repositories
                 .ThenInclude(x => x.Departamento)
                 .Include(x => x.HorarioConsultas)
                 .Include(x => x.Docencias)
+                .ThenInclude(x => x.Asignatura)
                 .SingleOrDefaultAsync(p => p.Id == id);
         }
 

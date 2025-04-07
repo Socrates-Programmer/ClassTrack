@@ -1,7 +1,5 @@
-﻿using ClassTrack.Persistence.Repositories;
-using ClassTrack.Utilidades;
-using DinkToPdf;
-using QuestPDF.Fluent;
+﻿using ClassTrack.Informes;
+using ClassTrack.Persistence.Repositories;
 
 namespace ClassTrack
 {
@@ -24,35 +22,10 @@ namespace ClassTrack
         {
             var profesor = await _profesoresRepository.GetAsync((int)cbProfesores.SelectedValue);
 
-            var context = new CustomAssemblyLoadContext();
-            var dllPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "NativeBinaries", "libwkhtmltox.dll");
-            context.LoadUnmanagedLibrary(dllPath);
+            FrmInformeProfesor from = new FrmInformeProfesor(profesor);
 
-            var html = $@"
-                <html>
-                <body>
-                    <h1>Informe Profesor</h1>
-                    <p>Nombre: {profesor.Nombre}</p>
-                </body>
-                </html>";
-
-            var converter = new SynchronizedConverter(new PdfTools());
-            var doc = new HtmlToPdfDocument()
-            {
-                            GlobalSettings = {
-                    PaperSize = PaperKind.A4,
-                    Orientation = DinkToPdf.Orientation.Portrait,
-                },
-                            Objects = {
-                    new ObjectSettings() {
-                        HtmlContent = html,
-                        WebSettings = { DefaultEncoding = "utf-8" }
-                    }
-                }
-            };
-
-            var pdf = converter.Convert(doc);
-            File.WriteAllBytes(@"C:\Users\plini\OneDrive\Escritorio\Reporte\reporte.pdf", pdf);
+            from.BringToFront();
+            from.ShowDialog();
 
         }
 

@@ -43,36 +43,40 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(604, 379);
+            btnCancelar.Location = new Point(423, 227);
+            btnCancelar.Margin = new Padding(2);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(111, 33);
+            btnCancelar.Size = new Size(78, 20);
             btnCancelar.TabIndex = 36;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(441, 379);
+            btnEliminar.Location = new Point(309, 227);
+            btnEliminar.Margin = new Padding(2);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(111, 33);
+            btnEliminar.Size = new Size(78, 20);
             btnEliminar.TabIndex = 35;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = true;
             // 
             // btnEditar
             // 
-            btnEditar.Location = new Point(266, 379);
+            btnEditar.Location = new Point(186, 227);
+            btnEditar.Margin = new Padding(2);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(111, 33);
+            btnEditar.Size = new Size(78, 20);
             btnEditar.TabIndex = 34;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = true;
             // 
             // btnAgregar
             // 
-            btnAgregar.Location = new Point(86, 379);
+            btnAgregar.Location = new Point(60, 227);
+            btnAgregar.Margin = new Padding(2);
             btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(111, 33);
+            btnAgregar.Size = new Size(78, 20);
             btnAgregar.TabIndex = 33;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
@@ -81,61 +85,67 @@
             // dgvDocencia
             // 
             dgvDocencia.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvDocencia.Location = new Point(351, 59);
+            dgvDocencia.Location = new Point(246, 35);
+            dgvDocencia.Margin = new Padding(2);
             dgvDocencia.Name = "dgvDocencia";
             dgvDocencia.RowHeadersWidth = 62;
-            dgvDocencia.Size = new Size(364, 277);
+            dgvDocencia.Size = new Size(255, 166);
             dgvDocencia.TabIndex = 29;
             // 
             // lblTitulo
             // 
             lblTitulo.AutoSize = true;
             lblTitulo.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitulo.Location = new Point(86, 39);
+            lblTitulo.Location = new Point(60, 23);
+            lblTitulo.Margin = new Padding(2, 0, 2, 0);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(119, 32);
+            lblTitulo.Size = new Size(81, 21);
             lblTitulo.TabIndex = 28;
             lblTitulo.Text = "Docencia";
             // 
             // cbProfe
             // 
             cbProfe.FormattingEnabled = true;
-            cbProfe.Location = new Point(76, 130);
+            cbProfe.Location = new Point(53, 78);
+            cbProfe.Margin = new Padding(2);
             cbProfe.Name = "cbProfe";
-            cbProfe.Size = new Size(183, 33);
+            cbProfe.Size = new Size(129, 23);
             cbProfe.TabIndex = 32;
             // 
             // lblProfe
             // 
             lblProfe.AutoSize = true;
-            lblProfe.Location = new Point(76, 101);
+            lblProfe.Location = new Point(53, 61);
+            lblProfe.Margin = new Padding(2, 0, 2, 0);
             lblProfe.Name = "lblProfe";
-            lblProfe.Size = new Size(100, 25);
+            lblProfe.Size = new Size(65, 15);
             lblProfe.TabIndex = 39;
             lblProfe.Text = "Profesores:";
             // 
             // lblAsignatura
             // 
             lblAsignatura.AutoSize = true;
-            lblAsignatura.Location = new Point(76, 193);
+            lblAsignatura.Location = new Point(53, 116);
+            lblAsignatura.Margin = new Padding(2, 0, 2, 0);
             lblAsignatura.Name = "lblAsignatura";
-            lblAsignatura.Size = new Size(109, 25);
+            lblAsignatura.Size = new Size(72, 15);
             lblAsignatura.TabIndex = 42;
             lblAsignatura.Text = "Asignaturas:";
             // 
             // cbAsignatura
             // 
             cbAsignatura.FormattingEnabled = true;
-            cbAsignatura.Location = new Point(76, 222);
+            cbAsignatura.Location = new Point(53, 133);
+            cbAsignatura.Margin = new Padding(2);
             cbAsignatura.Name = "cbAsignatura";
-            cbAsignatura.Size = new Size(183, 33);
+            cbAsignatura.Size = new Size(129, 23);
             cbAsignatura.TabIndex = 41;
             // 
             // FrmDocencia
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(560, 270);
             Controls.Add(lblAsignatura);
             Controls.Add(cbAsignatura);
             Controls.Add(lblProfe);
@@ -146,8 +156,10 @@
             Controls.Add(cbProfe);
             Controls.Add(dgvDocencia);
             Controls.Add(lblTitulo);
+            Margin = new Padding(2);
             Name = "FrmDocencia";
             Text = "FrmDocencia";
+            Load += FrmDocencia_Load;
             ((System.ComponentModel.ISupportInitialize)dgvDocencia).EndInit();
             ResumeLayout(false);
             PerformLayout();

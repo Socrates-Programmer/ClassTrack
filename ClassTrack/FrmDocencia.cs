@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using ClassTrack.Domain.Entities;
+﻿using ClassTrack.Domain.Entities;
 using ClassTrack.Persistence.Repositories;
 
 namespace ClassTrack
@@ -74,6 +65,11 @@ namespace ClassTrack
                 MessageBox.Show("Error al guardar: " + ex.Message);
             }
             await CargarDatos();
+        }
+
+        private void FrmDocencia_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
