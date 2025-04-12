@@ -35,13 +35,11 @@
             cbTitulacion = new ComboBox();
             cbArea = new ComboBox();
             btnAgregar = new Button();
-            btnEditar = new Button();
-            btnEliminar = new Button();
-            btnCancelar = new Button();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
+            btnCancelar = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvAsignatura).BeginInit();
             SuspendLayout();
             // 
@@ -112,39 +110,6 @@
             btnAgregar.UseVisualStyleBackColor = true;
             btnAgregar.Click += btnAgregar_Click;
             // 
-            // btnEditar
-            // 
-            btnEditar.Location = new Point(174, 226);
-            btnEditar.Margin = new Padding(2);
-            btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(78, 20);
-            btnEditar.TabIndex = 7;
-            btnEditar.Text = "Editar";
-            btnEditar.UseVisualStyleBackColor = true;
-            btnEditar.Click += btnEditar_Click;
-            // 
-            // btnEliminar
-            // 
-            btnEliminar.Location = new Point(293, 226);
-            btnEliminar.Margin = new Padding(2);
-            btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(78, 20);
-            btnEliminar.TabIndex = 8;
-            btnEliminar.Text = "Eliminar";
-            btnEliminar.UseVisualStyleBackColor = true;
-            btnEliminar.Click += btnEliminar_Click;
-            // 
-            // btnCancelar
-            // 
-            btnCancelar.Location = new Point(414, 226);
-            btnCancelar.Margin = new Padding(2);
-            btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(78, 20);
-            btnCancelar.TabIndex = 9;
-            btnCancelar.Text = "Cancelar";
-            btnCancelar.UseVisualStyleBackColor = true;
-            btnCancelar.Click += btnCancelar_Click;
-            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -171,7 +136,7 @@
             label4.Location = new Point(50, 130);
             label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(114, 15);
+            label4.Size = new Size(113, 15);
             label4.TabIndex = 12;
             label4.Text = "Titulación Asociada:";
             // 
@@ -185,18 +150,27 @@
             label5.TabIndex = 13;
             label5.Text = "Area de Conocimiento:";
             // 
+            // btnCancelar
+            // 
+            btnCancelar.Location = new Point(402, 226);
+            btnCancelar.Margin = new Padding(2);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(105, 20);
+            btnCancelar.TabIndex = 54;
+            btnCancelar.Text = "Volver a menu";
+            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click_1;
+            // 
             // FrmAsignaturas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(560, 270);
+            Controls.Add(btnCancelar);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(btnCancelar);
-            Controls.Add(btnEliminar);
-            Controls.Add(btnEditar);
             Controls.Add(btnAgregar);
             Controls.Add(cbArea);
             Controls.Add(cbTitulacion);
@@ -222,12 +196,10 @@
         private ComboBox cbTitulacion;
         private ComboBox cbArea;
         private Button btnAgregar;
-        private Button btnEditar;
-        private Button btnEliminar;
-        private Button btnCancelar;
         private Label label2;
         private Label label3;
         private Label label4;
         private Label label5;
+        private Button btnCancelar;
     }
 }

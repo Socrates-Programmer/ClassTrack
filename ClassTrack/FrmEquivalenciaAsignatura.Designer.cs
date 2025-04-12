@@ -30,11 +30,8 @@
         {
             label1 = new Label();
             cbAsignatura2 = new ComboBox();
-            btnGuardar = new Button();
             lblArea = new Label();
             btnCancelar = new Button();
-            btnEliminar = new Button();
-            btnEditar = new Button();
             btnAgregar = new Button();
             cbAsignatura1 = new ComboBox();
             dgvEquivalente = new DataGridView();
@@ -61,16 +58,6 @@
             cbAsignatura2.Size = new Size(208, 23);
             cbAsignatura2.TabIndex = 56;
             // 
-            // btnGuardar
-            // 
-            btnGuardar.Location = new Point(114, 221);
-            btnGuardar.Margin = new Padding(2);
-            btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(78, 20);
-            btnGuardar.TabIndex = 55;
-            btnGuardar.Text = "Guardar";
-            btnGuardar.UseVisualStyleBackColor = true;
-            // 
             // lblArea
             // 
             lblArea.AutoSize = true;
@@ -86,30 +73,11 @@
             btnCancelar.Location = new Point(389, 221);
             btnCancelar.Margin = new Padding(2);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(78, 20);
+            btnCancelar.Size = new Size(105, 20);
             btnCancelar.TabIndex = 53;
-            btnCancelar.Text = "Cancelar";
+            btnCancelar.Text = "Volver a menu";
             btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // btnEliminar
-            // 
-            btnEliminar.Location = new Point(295, 221);
-            btnEliminar.Margin = new Padding(2);
-            btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(78, 20);
-            btnEliminar.TabIndex = 52;
-            btnEliminar.Text = "Eliminar";
-            btnEliminar.UseVisualStyleBackColor = true;
-            // 
-            // btnEditar
-            // 
-            btnEditar.Location = new Point(203, 221);
-            btnEditar.Margin = new Padding(2);
-            btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(78, 20);
-            btnEditar.TabIndex = 51;
-            btnEditar.Text = "Editar";
-            btnEditar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // btnAgregar
             // 
@@ -159,11 +127,8 @@
             ClientSize = new Size(540, 280);
             Controls.Add(label1);
             Controls.Add(cbAsignatura2);
-            Controls.Add(btnGuardar);
             Controls.Add(lblArea);
             Controls.Add(btnCancelar);
-            Controls.Add(btnEliminar);
-            Controls.Add(btnEditar);
             Controls.Add(btnAgregar);
             Controls.Add(cbAsignatura1);
             Controls.Add(dgvEquivalente);
@@ -180,11 +145,8 @@
 
         private Label label1;
         private ComboBox cbAsignatura2;
-        private Button btnGuardar;
         private Label lblArea;
         private Button btnCancelar;
-        private Button btnEliminar;
-        private Button btnEditar;
         private Button btnAgregar;
         private ComboBox cbAsignatura1;
         private DataGridView dgvEquivalente;

@@ -48,7 +48,7 @@ namespace ClassTrack
             dgvHorarioConsulta.DataSource = data;
         }
 
-        private async  void btnAgregar_Click(object sender, EventArgs e)
+        private async void btnAgregar_Click(object sender, EventArgs e)
         {
             //if (string.IsNullOrEmpty(txtNombre.Text))
             //{
@@ -58,10 +58,10 @@ namespace ClassTrack
 
             var entidad = new HorarioConsulta()
             {
-               ProfesorID = (int)cbProfesor.SelectedValue,
-              Dia = (Dias)cbDias.SelectedItem,
-              HoraInicio = dTPHorarioInicio.Value.TimeOfDay,
-              HoraFin = dTPHorarioFin.Value.TimeOfDay
+                ProfesorID = (int)cbProfesor.SelectedValue,
+                Dia = (Dias)cbDias.SelectedItem,
+                HoraInicio = dTPHorarioInicio.Value.TimeOfDay,
+                HoraFin = dTPHorarioFin.Value.TimeOfDay
             };
 
             if (await _horarioConsultaRepository.InsertAsync(entidad))
@@ -77,6 +77,17 @@ namespace ClassTrack
             //txtNombre.Text = "";
             //txtNombre.Focus();
             await CargarDatos();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            // Ocultar el formulario actual
+            this.Hide();
+
+            // Mostrar el formulario de menú
+            menu Menua = new menu();
+
+            Menua.Show();
         }
     }
 }

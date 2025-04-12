@@ -10,7 +10,7 @@ namespace ClassTrack
         public FrmIncompatibilidadAsignatura()
         {
             InitializeComponent();
-            _asignaturasRepository = new AsignaturasRepository();   
+            _asignaturasRepository = new AsignaturasRepository();
             _incompatibilidadAsignaturaRepository = new IncompatibilidadAsignaturaRepository();
         }
 
@@ -72,6 +72,17 @@ namespace ClassTrack
             cbAsignatura2.ValueMember = "Id";
 
             dgvEquivalente.DataSource = data;
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            // Ocultar el formulario actual
+            this.Hide();
+
+            // Mostrar el formulario de menú
+            menu Menua = new menu();
+
+            Menua.Show();
         }
     }
 }

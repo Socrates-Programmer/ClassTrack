@@ -21,7 +21,7 @@ namespace ClassTrack
             TitulacionRepository = new TitulacionRepository();
         }
 
-        private  async Task LoadTitulaciones()
+        private async Task LoadTitulaciones()
         {
             var titulaciones = await TitulacionRepository.GetAllAsync();
             dgvTitulaciones.DataSource = null;
@@ -36,7 +36,7 @@ namespace ClassTrack
                 return;
             }
 
-           // string nivel = cbNivel.SelectedItem.ToString();
+            // string nivel = cbNivel.SelectedItem.ToString();
 
             var entidad = new Titulacion()
             {
@@ -45,7 +45,7 @@ namespace ClassTrack
 
             await TitulacionRepository.InsertAsync(entidad);
 
-            await LoadTitulaciones();  
+            await LoadTitulaciones();
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -56,6 +56,17 @@ namespace ClassTrack
         private async void FrmTitulaciones_Load(object sender, EventArgs e)
         {
             await LoadTitulaciones();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            // Ocultar el formulario actual
+            this.Hide();
+
+            // Mostrar el formulario de menú
+            menu Menua = new menu();
+
+            Menua.Show();
         }
     }
 }

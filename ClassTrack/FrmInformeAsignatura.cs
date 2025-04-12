@@ -14,7 +14,7 @@ namespace ClassTrack
 
         private async void btnGenerarInforme_Click(object sender, EventArgs e)
         {
-            var asignatura = await _asignaturasRepository.GetAsync((int) cbAsignatura.SelectedValue);
+            var asignatura = await _asignaturasRepository.GetAsync((int)cbAsignatura.SelectedValue);
 
             FrmInformeAsignaturas frmInformeAsignaturas = new FrmInformeAsignaturas(asignatura);
             frmInformeAsignaturas.BringToFront();
@@ -34,6 +34,17 @@ namespace ClassTrack
             cbAsignatura.DisplayMember = "Nombre";
             cbAsignatura.ValueMember = "Id";
 
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            // Ocultar el formulario actual
+            this.Hide();
+
+            // Mostrar el formulario de menú
+            menu Menua = new menu();
+
+            Menua.Show();
         }
     }
 }

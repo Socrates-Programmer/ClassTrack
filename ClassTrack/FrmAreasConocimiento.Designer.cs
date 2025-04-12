@@ -31,8 +31,6 @@
             label4 = new Label();
             label2 = new Label();
             btnCancelar = new Button();
-            btnEliminar = new Button();
-            btnEditar = new Button();
             btnAgregar = new Button();
             cbDepartamento = new ComboBox();
             txtNombre = new TextBox();
@@ -63,33 +61,14 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(398, 227);
+            btnCancelar.Location = new Point(366, 227);
             btnCancelar.Margin = new Padding(2);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(78, 20);
+            btnCancelar.Size = new Size(110, 20);
             btnCancelar.TabIndex = 23;
-            btnCancelar.Text = "Cancelar";
+            btnCancelar.Text = "Volver a menu";
             btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // btnEliminar
-            // 
-            btnEliminar.Location = new Point(277, 227);
-            btnEliminar.Margin = new Padding(2);
-            btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(78, 20);
-            btnEliminar.TabIndex = 22;
-            btnEliminar.Text = "Eliminar";
-            btnEliminar.UseVisualStyleBackColor = true;
-            // 
-            // btnEditar
-            // 
-            btnEditar.Location = new Point(158, 227);
-            btnEditar.Margin = new Padding(2);
-            btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(78, 20);
-            btnEditar.TabIndex = 21;
-            btnEditar.Text = "Editar";
-            btnEditar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // btnAgregar
             // 
@@ -149,8 +128,6 @@
             Controls.Add(label4);
             Controls.Add(label2);
             Controls.Add(btnCancelar);
-            Controls.Add(btnEliminar);
-            Controls.Add(btnEditar);
             Controls.Add(btnAgregar);
             Controls.Add(cbDepartamento);
             Controls.Add(txtNombre);
@@ -170,8 +147,6 @@
         private Label label4;
         private Label label2;
         private Button btnCancelar;
-        private Button btnEliminar;
-        private Button btnEditar;
         private Button btnAgregar;
         private ComboBox comboBox2;
         private ComboBox cbDepartamento;

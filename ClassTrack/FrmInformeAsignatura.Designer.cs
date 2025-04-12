@@ -33,6 +33,7 @@
             btnGenerarInforme = new Button();
             cbAsignatura = new ComboBox();
             lblTitulo = new Label();
+            btnCancelar = new Button();
             SuspendLayout();
             // 
             // btnExportarPDF
@@ -86,11 +87,23 @@
             lblTitulo.TabIndex = 41;
             lblTitulo.Text = "Informes de Asignatura";
             // 
+            // btnCancelar
+            // 
+            btnCancelar.Location = new Point(199, 246);
+            btnCancelar.Margin = new Padding(2);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(105, 20);
+            btnCancelar.TabIndex = 54;
+            btnCancelar.Text = "Volver a menu";
+            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
+            // 
             // FrmInformeAsignatura
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(514, 277);
+            Controls.Add(btnCancelar);
             Controls.Add(btnExportarPDF);
             Controls.Add(lblArea);
             Controls.Add(btnGenerarInforme);
@@ -110,5 +123,6 @@
         private Button btnGenerarInforme;
         private ComboBox cbAsignatura;
         private Label lblTitulo;
+        private Button btnCancelar;
     }
 }

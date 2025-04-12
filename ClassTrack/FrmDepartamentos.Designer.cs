@@ -32,11 +32,8 @@
             txtNombre = new TextBox();
             dgvDepartamentos = new DataGridView();
             lblTitulo = new Label();
-            btnGuardar = new Button();
-            btnCancelar = new Button();
-            btnEliminar = new Button();
-            btnEditar = new Button();
             btnAgregar = new Button();
+            btnCancelar = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvDepartamentos).BeginInit();
             SuspendLayout();
             // 
@@ -79,46 +76,6 @@
             lblTitulo.TabIndex = 27;
             lblTitulo.Text = "Departamentos";
             // 
-            // btnGuardar
-            // 
-            btnGuardar.Location = new Point(148, 222);
-            btnGuardar.Margin = new Padding(2);
-            btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(78, 20);
-            btnGuardar.TabIndex = 41;
-            btnGuardar.Text = "Guardar";
-            btnGuardar.UseVisualStyleBackColor = true;
-            // 
-            // btnCancelar
-            // 
-            btnCancelar.Location = new Point(422, 222);
-            btnCancelar.Margin = new Padding(2);
-            btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(78, 20);
-            btnCancelar.TabIndex = 40;
-            btnCancelar.Text = "Cancelar";
-            btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // btnEliminar
-            // 
-            btnEliminar.Location = new Point(328, 222);
-            btnEliminar.Margin = new Padding(2);
-            btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(78, 20);
-            btnEliminar.TabIndex = 39;
-            btnEliminar.Text = "Eliminar";
-            btnEliminar.UseVisualStyleBackColor = true;
-            // 
-            // btnEditar
-            // 
-            btnEditar.Location = new Point(237, 222);
-            btnEditar.Margin = new Padding(2);
-            btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(78, 20);
-            btnEditar.TabIndex = 38;
-            btnEditar.Text = "Editar";
-            btnEditar.UseVisualStyleBackColor = true;
-            // 
             // btnAgregar
             // 
             btnAgregar.Location = new Point(59, 222);
@@ -130,15 +87,23 @@
             btnAgregar.UseVisualStyleBackColor = true;
             btnAgregar.Click += btnAgregar_Click;
             // 
+            // btnCancelar
+            // 
+            btnCancelar.Location = new Point(396, 222);
+            btnCancelar.Margin = new Padding(2);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(105, 20);
+            btnCancelar.TabIndex = 54;
+            btnCancelar.Text = "Volver a menu";
+            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
+            // 
             // FrmDepartamentos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(560, 270);
-            Controls.Add(btnGuardar);
             Controls.Add(btnCancelar);
-            Controls.Add(btnEliminar);
-            Controls.Add(btnEditar);
             Controls.Add(btnAgregar);
             Controls.Add(lblNombre);
             Controls.Add(txtNombre);
@@ -159,10 +124,7 @@
         private TextBox txtNombre;
         private DataGridView dgvDepartamentos;
         private Label lblTitulo;
-        private Button btnGuardar;
-        private Button btnCancelar;
-        private Button btnEliminar;
-        private Button btnEditar;
         private Button btnAgregar;
+        private Button btnCancelar;
     }
 }

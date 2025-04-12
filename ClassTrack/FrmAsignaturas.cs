@@ -106,6 +106,17 @@ namespace ClassTrack
 
             dgvAsignatura.DataSource = data;
         }
+
+        private void btnCancelar_Click_1(object sender, EventArgs e)
+        {
+            // Ocultar el formulario actual
+            this.Hide();
+
+            // Mostrar el formulario de menú
+            menu Menua = new menu();
+
+            Menua.Show();
+        }
     }
 }
 

@@ -30,17 +30,14 @@
         {
             label1 = new Label();
             cbTipo = new ComboBox();
-            btnGuardar = new Button();
             lblArea = new Label();
-            btnCancelar = new Button();
-            btnEliminar = new Button();
-            btnEditar = new Button();
             btnAgregar = new Button();
             cbAsignatura = new ComboBox();
             dgvGrupo = new DataGridView();
             lblTitulo = new Label();
             label2 = new Label();
             txtCantidad = new TextBox();
+            btnCancelar = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvGrupo).BeginInit();
             SuspendLayout();
             // 
@@ -50,7 +47,7 @@
             label1.Location = new Point(51, 115);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(31, 15);
+            label1.Size = new Size(30, 15);
             label1.TabIndex = 57;
             label1.Text = "Tipo";
             // 
@@ -63,16 +60,6 @@
             cbTipo.Size = new Size(129, 23);
             cbTipo.TabIndex = 56;
             // 
-            // btnGuardar
-            // 
-            btnGuardar.Location = new Point(132, 252);
-            btnGuardar.Margin = new Padding(2);
-            btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(78, 20);
-            btnGuardar.TabIndex = 55;
-            btnGuardar.Text = "Guardar";
-            btnGuardar.UseVisualStyleBackColor = true;
-            // 
             // lblArea
             // 
             lblArea.AutoSize = true;
@@ -82,36 +69,6 @@
             lblArea.Size = new Size(64, 15);
             lblArea.TabIndex = 54;
             lblArea.Text = "Asignatura";
-            // 
-            // btnCancelar
-            // 
-            btnCancelar.Location = new Point(407, 252);
-            btnCancelar.Margin = new Padding(2);
-            btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(78, 20);
-            btnCancelar.TabIndex = 53;
-            btnCancelar.Text = "Cancelar";
-            btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // btnEliminar
-            // 
-            btnEliminar.Location = new Point(313, 252);
-            btnEliminar.Margin = new Padding(2);
-            btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(78, 20);
-            btnEliminar.TabIndex = 52;
-            btnEliminar.Text = "Eliminar";
-            btnEliminar.UseVisualStyleBackColor = true;
-            // 
-            // btnEditar
-            // 
-            btnEditar.Location = new Point(221, 252);
-            btnEditar.Margin = new Padding(2);
-            btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(78, 20);
-            btnEditar.TabIndex = 51;
-            btnEditar.Text = "Editar";
-            btnEditar.UseVisualStyleBackColor = true;
             // 
             // btnAgregar
             // 
@@ -171,20 +128,28 @@
             txtCantidad.Size = new Size(129, 23);
             txtCantidad.TabIndex = 59;
             // 
+            // btnCancelar
+            // 
+            btnCancelar.Location = new Point(387, 252);
+            btnCancelar.Margin = new Padding(2);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(105, 20);
+            btnCancelar.TabIndex = 60;
+            btnCancelar.Text = "Volver a menu";
+            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
+            // 
             // FrmGrupos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(538, 295);
+            Controls.Add(btnCancelar);
             Controls.Add(txtCantidad);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(cbTipo);
-            Controls.Add(btnGuardar);
             Controls.Add(lblArea);
-            Controls.Add(btnCancelar);
-            Controls.Add(btnEliminar);
-            Controls.Add(btnEditar);
             Controls.Add(btnAgregar);
             Controls.Add(cbAsignatura);
             Controls.Add(dgvGrupo);
@@ -200,16 +165,13 @@
         #endregion
         private Label label1;
         private ComboBox cbTipo;
-        private Button btnGuardar;
         private Label lblArea;
-        private Button btnCancelar;
-        private Button btnEliminar;
-        private Button btnEditar;
         private Button btnAgregar;
         private ComboBox cbAsignatura;
         private DataGridView dgvGrupo;
         private Label lblTitulo;
         private Label label2;
         private TextBox txtCantidad;
+        private Button btnCancelar;
     }
 }

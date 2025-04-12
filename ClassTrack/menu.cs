@@ -92,5 +92,71 @@ namespace ClassTrack
 
             titulaciones.Show();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            // Ocultar el formulario actual
+            this.Hide();
+
+            // Mostrar el formulario de menú
+            FrmDocencia Docencia = new FrmDocencia();
+
+            Docencia.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            // Ocultar el formulario actual
+            this.Hide();
+
+            // Mostrar el formulario de menú
+            FrmEquivalenciaAsignatura EquivalenciaAsignatura = new FrmEquivalenciaAsignatura();
+
+            EquivalenciaAsignatura.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            // Ocultar el formulario actual
+            this.Hide();
+
+            // Mostrar el formulario de menú
+            FrmGrupos Grupos = new FrmGrupos();
+
+            Grupos.Show();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            // Ocultar el formulario actual
+            this.Hide();
+
+            // Mostrar el formulario de menú
+            FrmHorarioConsulta Consulta = new FrmHorarioConsulta();
+
+            Consulta.Show();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            // Ocultar el formulario actual
+            this.Hide();
+
+            // Mostrar el formulario de menú
+            FrmIncompatibilidadAsignatura compatibilidadAsignatura = new FrmIncompatibilidadAsignatura();
+
+            compatibilidadAsignatura.Show();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            // Ocultar el formulario actual
+            this.Hide();
+
+            // Mostrar el formulario de menú
+            FrmInformeAsignatura Asignatura = new FrmInformeAsignatura();
+
+            Asignatura.Show();
+        }
     }
 }

@@ -33,12 +33,13 @@
             btnGenerarInforme = new Button();
             cbProfesores = new ComboBox();
             lblTitulo = new Label();
+            btnCancelar = new Button();
             SuspendLayout();
             // 
             // btnExportarPDF
             // 
             btnExportarPDF.Location = new Point(306, 191);
-            btnExportarPDF.Margin = new Padding(2, 2, 2, 2);
+            btnExportarPDF.Margin = new Padding(2);
             btnExportarPDF.Name = "btnExportarPDF";
             btnExportarPDF.Size = new Size(180, 32);
             btnExportarPDF.TabIndex = 40;
@@ -59,7 +60,7 @@
             // btnGenerarInforme
             // 
             btnGenerarInforme.Location = new Point(60, 191);
-            btnGenerarInforme.Margin = new Padding(2, 2, 2, 2);
+            btnGenerarInforme.Margin = new Padding(2);
             btnGenerarInforme.Name = "btnGenerarInforme";
             btnGenerarInforme.Size = new Size(180, 32);
             btnGenerarInforme.TabIndex = 33;
@@ -71,7 +72,7 @@
             // 
             cbProfesores.FormattingEnabled = true;
             cbProfesores.Location = new Point(60, 71);
-            cbProfesores.Margin = new Padding(2, 2, 2, 2);
+            cbProfesores.Margin = new Padding(2);
             cbProfesores.Name = "cbProfesores";
             cbProfesores.Size = new Size(426, 23);
             cbProfesores.TabIndex = 32;
@@ -87,17 +88,29 @@
             lblTitulo.TabIndex = 28;
             lblTitulo.Text = "Informes de Profesores";
             // 
+            // btnCancelar
+            // 
+            btnCancelar.Location = new Point(222, 239);
+            btnCancelar.Margin = new Padding(2);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(105, 20);
+            btnCancelar.TabIndex = 54;
+            btnCancelar.Text = "Volver a menu";
+            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
+            // 
             // FrmInformes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(560, 270);
+            Controls.Add(btnCancelar);
             Controls.Add(btnExportarPDF);
             Controls.Add(lblArea);
             Controls.Add(btnGenerarInforme);
             Controls.Add(cbProfesores);
             Controls.Add(lblTitulo);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "FrmInformes";
             Text = "FrmInformes";
             Load += FrmInformes_Load;
@@ -112,5 +125,6 @@
         private Button btnGenerarInforme;
         private ComboBox cbProfesores;
         private Label lblTitulo;
+        private Button btnCancelar;
     }
 }

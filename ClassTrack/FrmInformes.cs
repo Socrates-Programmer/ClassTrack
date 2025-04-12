@@ -48,5 +48,16 @@ namespace ClassTrack
             cbProfesores.ValueMember = "Id";
 
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            // Ocultar el formulario actual
+            this.Hide();
+
+            // Mostrar el formulario de menú
+            menu Menua = new menu();
+
+            Menua.Show();
+        }
     }
 }
