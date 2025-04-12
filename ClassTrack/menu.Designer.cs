@@ -42,6 +42,7 @@
             button10 = new Button();
             button11 = new Button();
             button12 = new Button();
+            button13 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -77,11 +78,11 @@
             // 
             // button4
             // 
-            button4.Location = new Point(31, 214);
+            button4.Location = new Point(31, 192);
             button4.Name = "button4";
             button4.Size = new Size(151, 23);
             button4.TabIndex = 3;
-            button4.Text = "Informes";
+            button4.Text = "Informes Profesores";
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
@@ -176,11 +177,22 @@
             button12.UseVisualStyleBackColor = true;
             button12.Click += button12_Click;
             // 
+            // button13
+            // 
+            button13.Location = new Point(31, 231);
+            button13.Name = "button13";
+            button13.Size = new Size(151, 23);
+            button13.TabIndex = 13;
+            button13.Text = "Informes Asignatura";
+            button13.UseVisualStyleBackColor = true;
+            button13.Click += button13_Click;
+            // 
             // menu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(889, 396);
+            Controls.Add(button13);
             Controls.Add(button12);
             Controls.Add(button11);
             Controls.Add(button10);
@@ -216,5 +228,6 @@
         private Button button10;
         private Button button11;
         private Button button12;
+        private Button button13;
     }
 }

@@ -22,6 +22,7 @@ namespace ClassTrack.Persistence.Contexts
             if (!optionsBuilder.IsConfigured)
             {
                 optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Universidad;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
+                //optionsBuilder.UseSqlServer("Data Source=LAPTOP-OQSR4U3M\\SQLEXPRESS;Initial Catalog=Universidad;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
             }
         }
 

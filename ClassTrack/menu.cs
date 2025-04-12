@@ -158,5 +158,16 @@ namespace ClassTrack
 
             Asignatura.Show();
         }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            // Ocultar el formulario actual
+            this.Hide();
+
+            // Mostrar el formulario de menú
+            FrmInformeAsignatura Asignatura = new FrmInformeAsignatura();
+
+            Asignatura.Show();
+        }
     }
 }

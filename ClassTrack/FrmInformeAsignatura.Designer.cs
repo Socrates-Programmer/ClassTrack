@@ -45,6 +45,7 @@
             btnExportarPDF.TabIndex = 45;
             btnExportarPDF.Text = "Exportar";
             btnExportarPDF.UseVisualStyleBackColor = true;
+            btnExportarPDF.Visible = false;
             // 
             // lblArea
             // 
